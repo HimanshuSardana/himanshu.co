@@ -1,7 +1,17 @@
+import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ["ts", "tsx", "md", "mdx"], // include md/mdx as pages
+  experimental: {
+    turbo: false, // 👈 disable Turbopack
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);

@@ -1,14 +1,20 @@
 import Image from "next/image";
-import { Rss, Sun } from "lucide-react";
+import { Rss, Sun, Download } from "lucide-react";
 
 function Navbar() {
   return (
     <div className="flex justify-between items-center">
       {/*  LINKS */}
       <div className="flex links gap-8">
-        <h3 className="text-2xl font-semibold lowercase">me</h3>
-        <h3 className="text-2xl text-neutral-600 lowercase">posts</h3>
-        <h3 className="text-2xl text-neutral-600 lowercase">projects</h3>
+        <h3 className="text-2xl font-semibold lowercase hover:text-neutral-200 cursor-pointer">
+          me
+        </h3>
+        <h3 className="text-2xl font-semibold text-neutral-600 lowercase hover:text-neutral-200 cursor-pointer">
+          posts
+        </h3>
+        <h3 className="text-2xl font-semibold text-neutral-600 lowercase hover:text-neutral-200 cursor-pointer">
+          projects
+        </h3>
       </div>
 
       {/* Secondary Links */}
@@ -32,11 +38,30 @@ export default function Home() {
           <h1 className="text-8xl font-bold inline text-neutral-600">
             , i'm himanshu sardana
           </h1>
-
-          <p className="text-2xl font-medium text-neutral-400 mt-5">
+          <p className="text-2xl font-medium text-neutral-400 mt-5 lowercase">
             Currently studying Computer Science at{" "}
-            <span className="underline dotted">Thapar University</span>
+            <span className="underline decoration-dashed decoration-1">
+              Thapar University
+            </span>
           </p>
+
+          <div className="border-b-2 border-neutral-800 mt-8"></div>
+
+          <div className="flex gap-5 items-center text-2xl font-medium">
+            <a
+              href="#"
+              className="text-2xl font-medium text-neutral-400 mt-5 lowercase underline decoration-dashed decoration-1 hover:text-neutral-200"
+            >
+              have a look at my resume
+            </a>{" "}
+            <span className="font-thin mt-5">|</span>{" "}
+            <a
+              href="github.com/HimanshuSardana"
+              className="text-2xl font-medium text-neutral-400 mt-5 lowercase underline decoration-dashed decoration-1 hover:text-neutral-200"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
