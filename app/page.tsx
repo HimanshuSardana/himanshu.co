@@ -1,30 +1,5 @@
 import Image from "next/image";
-import { Rss, Sun, Download } from "lucide-react";
-
-function Navbar() {
-  return (
-    <div className="flex justify-between items-center">
-      {/*  LINKS */}
-      <div className="flex links gap-8">
-        <h3 className="text-2xl font-semibold lowercase hover:text-neutral-200 cursor-pointer">
-          me
-        </h3>
-        <h3 className="text-2xl font-semibold text-neutral-600 lowercase hover:text-neutral-200 cursor-pointer">
-          posts
-        </h3>
-        <h3 className="text-2xl font-semibold text-neutral-600 lowercase hover:text-neutral-200 cursor-pointer">
-          projects
-        </h3>
-      </div>
-
-      {/* Secondary Links */}
-      <div className="flex secondary-links gap-8 items-center">
-        <Rss className="w-6 h-6 text-neutral-600 hover:text-neutral-200 cursor-pointer" />
-        <Sun className="w-6 h-6 text-neutral-600 hover:text-neutral-200 cursor-pointer" />
-      </div>
-    </div>
-  );
-}
+import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (
@@ -38,8 +13,9 @@ export default function Home() {
           <h1 className="text-8xl font-bold inline text-neutral-600">
             , i'm himanshu sardana
           </h1>
-          <p className="text-2xl font-medium text-neutral-400 mt-5 lowercase">
-            Currently studying Computer Science at{" "}
+          <p className="text-2xl font-medium text-neutral-400 mt-5 lowercase leading-normal">
+            20 y/o linux enthusiast (I use arch btw). Currently studying
+            Computer Science at{" "}
             <span className="underline decoration-dashed decoration-1">
               Thapar University
             </span>
@@ -56,7 +32,7 @@ export default function Home() {
             </a>{" "}
             <span className="font-thin mt-5">|</span>{" "}
             <a
-              href="github.com/HimanshuSardana"
+              href="https://github.com/HimanshuSardana"
               className="text-2xl font-medium text-neutral-400 mt-5 lowercase underline decoration-dashed decoration-1 hover:text-neutral-200"
             >
               GitHub
